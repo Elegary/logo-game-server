@@ -5,10 +5,10 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server);
 
-app.get('/', (req, res) => {
-    // Send hello world to client
-    res.send('<h1>Hello world!</h1>');
-});
+// use json body parser
+app.use(express.json());
+
+app.use('/api', require('./routes/api'));
 
 io.on('connection', (socket) => {
     console.log('a user connected');

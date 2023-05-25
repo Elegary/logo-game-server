@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  bcrypt: ^5.1.0
   body-parser: ^1.20.2
   express: ^4.18.2
   socket.io: ^4.6.1
   sqlite3: ^5.1.6
 
 dependencies:
+  bcrypt: 5.1.0
   body-parser: 1.20.2
   express: 4.18.2
   socket.io: 4.6.1
@@ -158,6 +160,18 @@ packages:
   /base64id/2.0.0:
     resolution: {integrity: sha512-lGe34o6EHj9y3Kts9R4ZYs/Gr+6N7MCaMlIFA3F1R2O5/m7K06AxfSeO5530PEERE6/WyEg3lsuyw4GHlPZHog==}
     engines: {node: ^4.5.0 || >= 5.9}
+    dev: false
+
+  /bcrypt/5.1.0:
+    resolution: {integrity: sha512-RHBS7HI5N5tEnGTmtR/pppX0mmDSBpQ4aCBsj7CEQfYXDcO74A8sIBYcJMuCsis2E81zDxeENYhv66oZwLiA+Q==}
+    engines: {node: '>= 10.0.0'}
+    requiresBuild: true
+    dependencies:
+      '@mapbox/node-pre-gyp': 1.0.10
+      node-addon-api: 5.1.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
     dev: false
 
   /body-parser/1.20.1:
@@ -847,6 +861,10 @@ packages:
 
   /node-addon-api/4.3.0:
     resolution: {integrity: sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==}
+    dev: false
+
+  /node-addon-api/5.1.0:
+    resolution: {integrity: sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==}
     dev: false
 
   /node-fetch/2.6.11:
