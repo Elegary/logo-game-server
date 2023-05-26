@@ -1,11 +1,34 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 const db = require('../../../db');
 
 const SALT_WORK_FACTOR = 10;
 
 const router = express.Router();
+
+router.post('/me', (req, res) => {
+    if(req.body.token) {
+        jwt.verify(req.body.token, 'test', (err, decoded) => {
+            if(err) {
+                return res.status(401).json({
+                    message: 'Token invalide'
+                })
+            }
+            else {
+                return res.status(200).json({
+                    message: 'Token valide'
+                })
+            }
+        })
+    }
+    else {
+        return res.status(401).json({
+            message: 'Token invalide'
+        })
+    }
+});
 
 router.post('/login', (req, res) => {
     if(req.body.username && req.body.password) {
@@ -17,8 +40,10 @@ router.post('/login', (req, res) => {
             }
             if (row) {
                 if (bcrypt.compareSync(req.body.password, row.password)) {
+                    let token = jwt.sign({ username: row.username }, 'test', { expiresIn: '24h' });
                     return res.status(200).json({
-                        message: 'Connexion réussie'
+                        message: 'Connexion réussie',
+                        token: token
                     })
                 }
                 else {
@@ -36,7 +61,7 @@ router.post('/login', (req, res) => {
     }
 
     else {
-        res.status(401).json({
+        res.status(400).json({
             message: 'Merci de renseigner un nom d\'utilisateur et un mot de passe!'
         })
     }
