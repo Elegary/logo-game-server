@@ -4,30 +4,17 @@ const jwt = require('jsonwebtoken');
 
 const db = require('../../../db');
 
+const authMiddleware = require('../../middlewares/auth');
+
 const SALT_WORK_FACTOR = 10;
 
 const router = express.Router();
 
-router.post('/me', (req, res) => {
-    if(req.body.token) {
-        jwt.verify(req.body.token, 'test', (err, decoded) => {
-            if(err) {
-                return res.status(401).json({
-                    message: 'Token invalide'
-                })
-            }
-            else {
-                return res.status(200).json({
-                    message: 'Token valide'
-                })
-            }
-        })
-    }
-    else {
-        return res.status(401).json({
-            message: 'Token invalide'
-        })
-    }
+router.post('/me', authMiddleware, (req, res) => {
+    res.json({
+        message: 'Token valide',
+        id: req.user.id,
+    })
 });
 
 router.post('/login', (req, res) => {
@@ -40,10 +27,15 @@ router.post('/login', (req, res) => {
             }
             if (row) {
                 if (bcrypt.compareSync(req.body.password, row.password)) {
-                    let token = jwt.sign({ username: row.username }, 'test', { expiresIn: '24h' });
+                    let token = jwt.sign(
+                        { username: row.username, id: row.id },
+                        'test',
+                        { expiresIn: '24h' }
+                    );
                     return res.status(200).json({
                         message: 'Connexion réussie',
-                        token: token
+                        token: token,
+                        id: row.id
                     })
                 }
                 else {

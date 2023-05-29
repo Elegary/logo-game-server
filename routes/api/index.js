@@ -1,5 +1,7 @@
 const express = require('express');
 
+const authMiddleware = require('../middlewares/auth');
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -9,5 +11,8 @@ router.get('/', (req, res) => {
 });
 
 router.use('/auth', require('./auth'));
+
+// Use auth middleware for games route
+router.use('/games', authMiddleware, require('./games'));
 
 module.exports = router;

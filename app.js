@@ -9,13 +9,20 @@ const io = new Server(server, {
     }
 });
 
-const cors = require('cors');
+// make io accessible from anywhere
+module.exports = {
+    io
+}
 
-const logos = require('./static/infos.json');
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
+
+const db = require('./db');
 
 const { v4: uuidv4 } = require('uuid');
 
-let gameStates = {};
+const handleStreakGameEvents = require('./streak');
+const { handleMultiplayerGameEvents } = require('./multiplayer');
 
 // use json body parser
 app.use(express.json());
@@ -27,55 +34,31 @@ app.use('/api', require('./routes/api'));
 
 app.use('/static/brands', express.static('static/brands'));
 
-function getRandomLogo(logosState){
-    let logo = logosState[Math.floor(Math.random() * logosState.length)];
-    console.log(logo.name)
-    return logo;
-}
 
-function removeLogoFromList(logo, logosState){
-    //console.log(logosState.length + " logos left")
-    //console.log(logosState)
-    logosState = logosState.filter((item) => {
-        return item !== logo;
-    });
-    //console.log(logosState)
-    console.log(logosState.length + " logos left")
-    return logosState;
-}
-
-io.on('connection', (socket) => {
-    console.log('a user connected');
-    socket.on('newStreak', (data) => {
-        console.log("Starting new game")
-        gameStates[socket.id] = {
-            currentLogo: getRandomLogo(logos),
-            score: 0,
-            logosState: logos
-        };
-
-        socket.emit('newStreak', {filename: gameStates[socket.id].currentLogo.filename});
-        socket.emit('score', gameStates[socket.id].score);
-
-    });
-
-    socket.on('guess', (data) => {
-        if(data.trim().toLowerCase() === gameStates[socket.id].currentLogo.name.trim().toLowerCase()){
-            socket.emit('correctGuess', data);
-            gameStates[socket.id].score += 1;
-            gameStates[socket.id].logosState = removeLogoFromList(gameStates[socket.id].currentLogo, gameStates[socket.id].logosState);
-            gameStates[socket.id].currentLogo = getRandomLogo(gameStates[socket.id].logosState);
-            socket.emit('score', gameStates[socket.id].score);
-            socket.emit('newStreak', {filename: gameStates[socket.id].currentLogo.filename});
+io.use(function(socket, next){
+    if (socket.handshake.query && socket.handshake.query.token){
+      jwt.verify(socket.handshake.query.token, 'test', function(err, decoded) {
+        if (err){
+            console.log("[WARNING] Potential hacking attempt: " + socket.handshake.query.token);
+            return next(new Error('Authentication error'));
+        } else {
+            console.log("[INFO] User connected: " + decoded.username);
+            socket.decoded = decoded;
+            next();
         }
-
-        else {
-            socket.emit('wrongGuess', data);
-        }
-
-    });
-
-});
+      });
+    }
+    else {
+        // log ip address
+        console.log("[WARNING] Potential hacking attempt tried to login without token: " + socket.handshake.address);
+        next(new Error('Authentication error'));
+    }    
+  })
+  .on('connection', function(socket) {
+        // Connection now authenticated to receive further events
+        handleStreakGameEvents(socket);
+        handleMultiplayerGameEvents(socket);
+  });
 
 server.listen(3000, () => {
     console.log('listening on *:3000');
