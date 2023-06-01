@@ -25,6 +25,10 @@ module.exports = async function handleStreakGameEvents(socket){
     });
     
     socket.on('streak-guess', async (data) => {
+        if(!gameStates[socket.decoded.id]){
+            console.log('[WARNING] User ' + socket.decoded.username + ' tried to guess without a game started');
+            return;
+        }
         if(data.trim().toLowerCase() === gameStates[socket.decoded.id].currentLogo.name.trim().toLowerCase()){
             socket.emit('correctGuess', data);
             gameStates[socket.decoded.id].score += 1;

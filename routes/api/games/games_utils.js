@@ -61,6 +61,41 @@ async function insertGame(creatorId, categoryId, gameCode){
     });
 }
 
+async function setGameStarted(gameId){
+    return new Promise((resolve, reject) => {
+        db.run(`UPDATE multiplayer_games SET date_started = ? WHERE id = ?`, [Date.now(), gameId], (err) => {
+            if(err){
+                reject(err);
+            }
+            resolve(true);
+        });
+    });
+}
+
+async function setGameFinished(gameId){
+    return new Promise((resolve, reject) => {
+        db.run(`UPDATE multiplayer_games SET date_finished = ? WHERE id = ?`, [Date.now(), gameId], (err) => {
+            if(err){
+                reject(err);
+            }
+            resolve(true);
+        });
+    });
+}
+
+async function setGameWinner(gameId, userId){
+    return new Promise((resolve, reject) => {
+        db.run(`UPDATE multiplayer_games SET winner_id = ? WHERE id = ?`, [userId, gameId], (err) => {
+            if(err){
+                console.log(err);
+                reject(err);
+            }
+            console.log('Game winner set to ' + userId);
+            resolve(true);
+        });
+    });
+}
+
 async function getBestScoresForCategory(categoryId){
     return new Promise((resolve, reject) => {
         db.all(`SELECT streak.score, users.username FROM streak INNER JOIN users ON streak.user_id = users.id WHERE streak.category_id = ? ORDER BY streak.score DESC LIMIT 20`, [categoryId], (err, rows) => {
@@ -82,5 +117,8 @@ module.exports = {
     getMultiplayerGameByCode,
     checkIfGameCodeExists,
     getBestScoresForCategory,
-    insertGame
+    insertGame,
+    setGameStarted,
+    setGameFinished,
+    setGameWinner
 }
