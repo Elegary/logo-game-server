@@ -1,25 +1,49 @@
 const db = require('./db');
 const { getRandomLogo, logos, removeLogoFromList, getPlayerBestScoreForCategory, insertPlayerScoreForCaterogy }= require('./game_utils');
 
+const { categories_data } = require('./game_utils');
+
 let gameStates = {};
 
 module.exports = async function handleStreakGameEvents(socket){
     
     socket.on('newStreak', async (data) => {
+        if(!data){
+            return;
+        }        
+        if(data.category){
+            // category should be an integer
+            if(isNaN(data.category)){
+                socket.emit('steak-error', 'Merci de renseigner une catégorie valide')
+                return;
+            }
+            if(data.category < 1 || data.category > categories_data.length){
+                socket.emit('steak-error', 'Merci de renseigner une catégorie valide')
+                return;
+            }
+        } 
+        
+        else {
+            socket.emit('steak-error', 'Merci de renseigner une catégorie valide')
+            return;
+        }
+
         console.log("[INFO] New streak game started for user " + socket.decoded.username);
-        let bestScore = await getPlayerBestScoreForCategory(socket.decoded.id, 1);
+        let bestScore = await getPlayerBestScoreForCategory(socket.decoded.id, data.category);
         gameStates[socket.decoded.id] = {
             currentLogo: getRandomLogo(logos),
             score: 0,
             logosState: logos,
-            currentCategory: 1,
+            currentCategory: parseInt(data.category),
             bestScore
         };
+        console.log('current category: ' + gameStates[socket.decoded.id].currentCategory);
         console.log('Best score: ' + gameStates[socket.decoded.id].bestScore);
         socket.emit('newStreak', {filename: gameStates[socket.decoded.id].currentLogo.filename});
         socket.emit('streak-score', {
             score: gameStates[socket.decoded.id].score,
-            bestScore: gameStates[socket.decoded.id].bestScore
+            bestScore: gameStates[socket.decoded.id].bestScore,
+            category: gameStates[socket.decoded.id].currentCategory,
         });
 
     });
@@ -50,7 +74,7 @@ module.exports = async function handleStreakGameEvents(socket){
         else {
             socket.emit('streak-wrongGuess', data);
             // insert highscore into streak table
-            await insertPlayerScoreForCaterogy(socket.decoded.id, 1, gameStates[socket.decoded.id].score);
+            await insertPlayerScoreForCaterogy(socket.decoded.id, gameStates[socket.decoded.id].currentCategory, gameStates[socket.decoded.id].score);
         }
 
     });

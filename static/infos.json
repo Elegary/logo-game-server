@@ -1,178 +1,346 @@
 [
   {
-    "name": "Tesla ",
-    "filename": "TSLA-003fc2b3.png"
+    "name": "Tesla",
+    "filename": "TSLA-003fc2b3.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Toyota ",
-    "filename": "TM-c26d16c5.png"
+    "name": "Toyota",
+    "filename": "TM-c26d16c5.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Porsche ",
-    "filename": "P911.DE-743d2644.png"
+    "name": "Porsche",
+    "filename": "P911.DE-743d2644.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "BYD ",
-    "filename": "002594.SZ-20d68cd6.png"
+    "name": "BYD",
+    "filename": "002594.SZ-20d68cd6.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Volkswagen ",
-    "filename": "VOW3.DE-d814a59e.png"
+    "name": "Volkswagen",
+    "filename": "VOW3.DE-d814a59e.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Mercedes-Benz ",
-    "filename": "MBG.DE-52d05055.png"
+    "name": "Mercedes-Benz",
+    "filename": "MBG.DE-52d05055.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Daimler ",
-    "filename": "DAI.DE-15d968d6.png"
+    "name": "Daimler",
+    "filename": "DAI.DE-15d968d6.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Audi ",
-    "filename": "NSU.DE-3c3b48b1.png"
+    "name": "Audi",
+    "filename": "NSU.DE-3c3b48b1.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "BMW ",
-    "filename": "BMW.DE-4e1b3543.png"
+    "name": "BMW",
+    "filename": "BMW.DE-4e1b3543.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Stellantis ",
-    "filename": "STLA-1ca160ee.png"
+    "name": "Stellantis",
+    "filename": "STLA-1ca160ee.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "General Motors ",
-    "filename": "GM-90e8b14f.png"
+    "name": "General Motors",
+    "filename": "GM-90e8b14f.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Ford ",
-    "filename": "F-555219e1.png"
+    "name": "Ford",
+    "filename": "F-555219e1.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Ferrari ",
-    "filename": "RACE-5aa25c7d.png"
+    "name": "Ferrari",
+    "filename": "RACE-5aa25c7d.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Honda ",
-    "filename": "HMC-66b7bd91.png"
+    "name": "Honda",
+    "filename": "HMC-66b7bd91.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Hyundai ",
-    "filename": "HYMTF-da7258de.png"
+    "name": "Hyundai",
+    "filename": "HYMTF-da7258de.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Kia ",
-    "filename": "000270.KS-dc73103b.png"
+    "name": "Kia",
+    "filename": "000270.KS-dc73103b.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Peugeot ",
-    "filename": "UG.PA-f2f4e99d.png"
+    "name": "Peugeot",
+    "filename": "UG.PA-f2f4e99d.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Li Auto ",
-    "filename": "LI-e6f93e00.png"
+    "name": "Li Auto",
+    "filename": "LI-e6f93e00.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Mahindra &amp; Mahindra ",
-    "filename": "M&amp;M.NS-44454adc.png"
+    "name": "Lucid Motors",
+    "filename": "LCID-f3bf0ce1.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Lucid Motors ",
-    "filename": "LCID-f3bf0ce1.png"
+    "name": "Suzuki Motor",
+    "filename": "7269.T-1e83caed.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Suzuki Motor ",
-    "filename": "7269.T-1e83caed.png"
+    "name": "Tata Motors",
+    "filename": "TATAMOTORS.NS-6b3c432a.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Tata Motors ",
-    "filename": "TATAMOTORS.NS-6b3c432a.png"
+    "name": "Nissan",
+    "filename": "7201.T-02a905b4.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Nissan ",
-    "filename": "7201.T-02a905b4.png"
+    "name": "Chongqing Changan",
+    "filename": "000625.SZ-ccdfd6cb.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Chongqing Changan ",
-    "filename": "000625.SZ-ccdfd6cb.png"
+    "name": "NIO",
+    "filename": "NIO-cdaf55fc.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "NIO ",
-    "filename": "NIO-cdaf55fc.png"
+    "name": "GAC (Guangzhou Automobile Group)",
+    "filename": "601238.SS-58dba5c1.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "GAC (Guangzhou Automobile Group) ",
-    "filename": "601238.SS-58dba5c1.png"
+    "name": "Volvo Car",
+    "filename": "VOLCAR-B.ST-c84f14a5.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Volvo Car ",
-    "filename": "VOLCAR-B.ST-c84f14a5.png"
+    "name": "Subaru",
+    "filename": "7270.T-fe12fcee.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Subaru ",
-    "filename": "7270.T-fe12fcee.png"
+    "name": "Renault",
+    "filename": "RNO.PA-d45da38f.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Renault ",
-    "filename": "RNO.PA-d45da38f.png"
+    "name": "Rivian",
+    "filename": "RIVN-d64562a3.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Rivian ",
-    "filename": "RIVN-d64562a3.png"
+    "name": "Geely",
+    "filename": "0175.HK-2c70f83c.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Geely ",
-    "filename": "0175.HK-2c70f83c.png"
+    "name": "Isuzu",
+    "filename": "7202.T-345a1d0a.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Isuzu ",
-    "filename": "7202.T-345a1d0a.png"
+    "name": "Polestar",
+    "filename": "PSNY-97ffa9f3.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Polestar ",
-    "filename": "PSNY-97ffa9f3.png"
+    "name": "XPeng",
+    "filename": "XPEV-1c9b9438.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "XPeng ",
-    "filename": "XPEV-1c9b9438.png"
+    "name": "Polaris",
+    "filename": "PII-e60c9196.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Polaris ",
-    "filename": "PII-e60c9196.png"
+    "name": "Mitsubishi Motors",
+    "filename": "7211.T-331d24c7.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Mitsubishi Motors ",
-    "filename": "7211.T-331d24c7.png"
+    "name": "Mazda",
+    "filename": "7261.T-b13c85ce.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Mazda ",
-    "filename": "7261.T-b13c85ce.png"
+    "name": "FAW Car",
+    "filename": "000800.SZ-dfac7787.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "FAW Car ",
-    "filename": "000800.SZ-dfac7787.png"
+    "name": "Tofaş Türk Otomobil Fabrikası",
+    "filename": "TOASO.IS-7595856a.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Tofaş Türk Otomobil Fabrikası ",
-    "filename": "TOASO.IS-7595856a.png"
+    "name": "Leapmotor",
+    "filename": "9863.HK-e877bb27.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Leapmotor ",
-    "filename": "9863.HK-e877bb27.png"
+    "name": "Fisker",
+    "filename": "FSR-d36df403.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Fisker ",
-    "filename": "FSR-d36df403.png"
+    "name": "Nikola",
+    "filename": "NKLA-c9449a33.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Nikola ",
-    "filename": "NKLA-c9449a33.png"
+    "name": "Mullen Automotive",
+    "filename": "MULN-9fa246fb.png",
+    "categories": [
+      1,
+      2
+    ]
   },
   {
-    "name": "Mullen Automotive ",
-    "filename": "MULN-9fa246fb.png"
-  },
-  {
-    "name": "SsangYong Motor ",
-    "filename": "003620.KS-fadcc7fe.png"
+    "name": "SsangYong Motor",
+    "filename": "003620.KS-fadcc7fe.png",
+    "categories": [
+      1,
+      2
+    ]
   }
 ]

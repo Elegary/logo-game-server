@@ -6,6 +6,20 @@ const { getCurrentPlayersInGame } = require('../../../socket_utils');
 
 const router = express.Router();
 
+const categories_data = require('../../../static/categories.json');
+
+let categories_for_client = [];
+for(let category of categories_data){
+    // check if is a letter lik a, b, c, etc.
+    if(category.name.length === 1){
+        categories_for_client.push(`Logos en ${category.name.toUpperCase()}`);
+    }
+    else {
+        categories_for_client.push(category.name);
+    }
+
+}
+
 
 router.get('/multiplayer/active', async (req, res) => {
     /*
@@ -55,6 +69,13 @@ router.post('/multiplayer', async (req, res) => {
         message: 'Game created',
         category: category_id,
         game_code: game_code
+    })
+});
+
+router.get('/categories', async (req, res) => {
+    res.json({
+        message: 'Categories',
+        categories: categories_for_client
     })
 });
 

@@ -1,6 +1,7 @@
 const db = require('./db');
 
 const logos = require('./static/infos.json');
+const categories_data = require('./static/categories.json');
 
 async function getPlayerBestScoreForCategory(playerId, categoryId){
     const score = await new Promise((resolve, reject) => {
@@ -54,5 +55,6 @@ module.exports = {
     removeLogoFromList,
     getPlayerBestScoreForCategory,
     insertPlayerScoreForCaterogy,
-    logos
+    logos,
+    categories_data
 }

@@ -4,11 +4,13 @@ const logos = require('./static/infos.json');
 
 const { getMultiplayerGameByCode, setGameStarted, setGameFinished, setGameWinner } = require('./routes/api/games/games_utils');
 const { getRoomsByUserId, getCurrentPlayersInGame } = require('./socket_utils');
-const { getRandomLogo, removeLogoFromList } = require('./game_utils');
+const { getRandomLogo, removeLogoFromList, categories_data } = require('./game_utils');
 
 const io = require('./app').io;
 
 let gameStates = {};
+
+console.log('[INFO] Multiplayer game events handler loaded')
 
 async function handleMultiplayerGameEvents(socket){
     
@@ -212,7 +214,9 @@ async function registerGameTchatPlayersInteractions(socket, game) {
     socket.join(`game-${game.id}`);
     socket.emit('multiplayer-joined', {
         message: 'Joined game',
-        game
+        game,
+        category_text: categories_data[game.category_id - 1].name,
+        time: Date.now()
     });
     console.log('[INFO] User ' + socket.decoded.username + ' joined game #' + game.game_code + ' (ID : ' + game.id + ')');
 

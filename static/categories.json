@@ -1,0 +1,490 @@
+[
+    {
+        "textId": "all",
+        "name": "Tous les logos"
+    },
+    {
+      "textId": "a",
+      "name": "A"
+    },
+    {
+      "textId": "b",
+      "name": "B"
+    },
+    {
+      "textId": "c",
+      "name": "C"
+    },
+    {
+      "textId": "d",
+      "name": "D"
+    },
+    {
+      "textId": "e",
+      "name": "E"
+    },
+    {
+      "textId": "f",
+      "name": "F"
+    },
+    {
+      "textId": "g",
+      "name": "G"
+    },
+    {
+      "textId": "h",
+      "name": "H"
+    },
+    {
+      "textId": "i",
+      "name": "I"
+    },
+    {
+      "textId": "j",
+      "name": "J"
+    },
+    {
+      "textId": "k",
+      "name": "K"
+    },
+    {
+      "textId": "l",
+      "name": "L"
+    },
+    {
+      "textId": "m",
+      "name": "M"
+    },
+    {
+      "textId": "n",
+      "name": "N"
+    },
+    {
+      "textId": "o",
+      "name": "O"
+    },
+    {
+      "textId": "p",
+      "name": "P"
+    },
+    {
+      "textId": "q",
+      "name": "Q"
+    },
+    {
+      "textId": "r",
+      "name": "R"
+    },
+    {
+      "textId": "s",
+      "name": "S"
+    },
+    {
+      "textId": "t",
+      "name": "T"
+    },
+    {
+      "textId": "u",
+      "name": "U"
+    },
+    {
+      "textId": "v",
+      "name": "V"
+    },
+    {
+      "textId": "w",
+      "name": "W"
+    },
+    {
+      "textId": "x",
+      "name": "X"
+    },
+    {
+      "textId": "y",
+      "name": "Y"
+    },
+    {
+      "textId": "z",
+      "name": "Z"
+    },
+    {
+      "textId": "etfs-and-etns",
+      "name": "ETFs et ETNs"
+    },
+    {
+      "textId": "a",
+      "name": "A"
+    },
+    {
+      "textId": "b",
+      "name": "B"
+    },
+    {
+      "textId": "c",
+      "name": "C"
+    },
+    {
+      "textId": "d",
+      "name": "D"
+    },
+    {
+      "textId": "e",
+      "name": "E"
+    },
+    {
+      "textId": "f",
+      "name": "F"
+    },
+    {
+      "textId": "g",
+      "name": "G"
+    },
+    {
+      "textId": "h",
+      "name": "H"
+    },
+    {
+      "textId": "i",
+      "name": "I"
+    },
+    {
+      "textId": "j",
+      "name": "J"
+    },
+    {
+      "textId": "k",
+      "name": "K"
+    },
+    {
+      "textId": "l",
+      "name": "L"
+    },
+    {
+      "textId": "m",
+      "name": "M"
+    },
+    {
+      "textId": "n",
+      "name": "N"
+    },
+    {
+      "textId": "o",
+      "name": "O"
+    },
+    {
+      "textId": "p",
+      "name": "P"
+    },
+    {
+      "textId": "q",
+      "name": "Q"
+    },
+    {
+      "textId": "r",
+      "name": "R"
+    },
+    {
+      "textId": "s",
+      "name": "S"
+    },
+    {
+      "textId": "t",
+      "name": "T"
+    },
+    {
+      "textId": "u",
+      "name": "U"
+    },
+    {
+      "textId": "v",
+      "name": "V"
+    },
+    {
+      "textId": "w",
+      "name": "W"
+    },
+    {
+      "textId": "x",
+      "name": "X"
+    },
+    {
+      "textId": "y",
+      "name": "Y"
+    },
+    {
+      "textId": "z",
+      "name": "Z"
+    },
+    {
+      "textId": "usa",
+      "name": "États-Unis"
+    },
+    {
+      "textId": "canada",
+      "name": "Canada"
+    },
+    {
+      "textId": "mexique",
+      "name": "Mexique"
+    },
+    {
+      "textId": "bresil",
+      "name": "Brésil"
+    },
+    {
+      "textId": "chili",
+      "name": "Chili"
+    },
+    {
+      "textId": "allemagne",
+      "name": "Allemagne"
+    },
+    {
+      "textId": "royaume-uni",
+      "name": "Royaume-Uni"
+    },
+    {
+      "textId": "france",
+      "name": "France"
+    },
+    {
+      "textId": "espagne",
+      "name": "Espagne"
+    },
+    {
+      "textId": "pays-bas",
+      "name": "Pays-Bas"
+    },
+    {
+      "textId": "suede",
+      "name": "Suède"
+    },
+    {
+      "textId": "italie",
+      "name": "Italie"
+    },
+    {
+      "textId": "suisse",
+      "name": "Suisse"
+    },
+    {
+      "textId": "pologne",
+      "name": "Pologne"
+    },
+    {
+      "textId": "finlande",
+      "name": "Finlande"
+    },
+    {
+      "textId": "chine",
+      "name": "Chine"
+    },
+    {
+      "textId": "japon",
+      "name": "Japon"
+    },
+    {
+      "textId": "coree-du-sud",
+      "name": "Corée du Sud"
+    },
+    {
+      "textId": "hong-kong",
+      "name": "Hong Kong"
+    },
+    {
+      "textId": "singapour",
+      "name": "Singapour"
+    },
+    {
+      "textId": "indonesie",
+      "name": "Indonésie"
+    },
+    {
+      "textId": "inde",
+      "name": "Inde"
+    },
+    {
+      "textId": "malaisie",
+      "name": "Malaisie"
+    },
+    {
+      "textId": "taiwan",
+      "name": "Taiwan"
+    },
+    {
+      "textId": "thailande",
+      "name": "Thailande"
+    },
+    {
+      "textId": "australie",
+      "name": "Australie"
+    },
+    {
+      "textId": "nouvelle-zelande",
+      "name": "Nouvelle-Zélande"
+    },
+    {
+      "textId": "israel",
+      "name": "Israël"
+    },
+    {
+      "textId": "arabie-saoudite",
+      "name": "Arabie Saoudite"
+    },
+    {
+      "textId": "turquie",
+      "name": "Turquie"
+    },
+    {
+      "textId": "russie",
+      "name": "Russie"
+    },
+    {
+      "textId": "afrique-du-sud",
+      "name": "Afrique du Sud"
+    },
+    {
+      "textId": "constructeurs-automobiles",
+      "name": "🚗 Constructeurs automobiles"
+    },
+    {
+      "textId": "compagnies-aeriennes",
+      "name": "✈️ Compagnies aériennes"
+    },
+    {
+      "textId": "aeroports",
+      "name": "🛫 Aéroports"
+    },
+    {
+      "textId": "constructeurs-d-avions",
+      "name": "✈️ Constructeurs d'avions"
+    },
+    {
+      "textId": "banques",
+      "name": "🏦 Banques"
+    },
+    {
+      "textId": "hotellerie",
+      "name": "🏨 Hotels"
+    },
+    {
+      "textId": "pharmaceutiques",
+      "name": "💊 Pharmaceutique"
+    },
+    {
+      "textId": "e-commerce",
+      "name": "🛒 E-Commerce"
+    },
+    {
+      "textId": "sante",
+      "name": "⚕️ Santé"
+    },
+    {
+      "textId": "services-postaux",
+      "name": "📦 Services postaux"
+    },
+    {
+      "textId": "medias-et-presse",
+      "name": "📰 Médias/Presse"
+    },
+    {
+      "textId": "boissons-alcoolisees",
+      "name": "🍷 Boissons alcoolisées"
+    },
+    {
+      "textId": "boissons",
+      "name": "🥤 Boissons"
+    },
+    {
+      "textId": "habillement",
+      "name": "👚 Vêtements"
+    },
+    {
+      "textId": "exploitation-miniere",
+      "name": "⛏️ Exploitation minière"
+    },
+    {
+      "textId": "transport-ferrovier",
+      "name": "🚂 Chemins de fer"
+    },
+    {
+      "textId": "assurance",
+      "name": "🏦 Assurance"
+    },
+    {
+      "textId": "immobilier",
+      "name": "🏠 Immobilier"
+    },
+    {
+      "textId": "ports",
+      "name": "⚓ Ports"
+    },
+    {
+      "textId": "services-professionnels",
+      "name": "💼 Services professionnels"
+    },
+    {
+      "textId": "alimentation",
+      "name": "🍴 Alimentation"
+    },
+    {
+      "textId": "chaines-de-restaurants",
+      "name": "🍔 Chaînes de restaurants"
+    },
+    {
+      "textId": "logiciels-informatique",
+      "name": "‍💻 Logiciels informatique"
+    },
+    {
+      "textId": "semi-conducteurs",
+      "name": "📟 Semi-conducteurs"
+    },
+    {
+      "textId": "tabac",
+      "name": " 🚬 Tabac"
+    },
+    {
+      "textId": "services-financiers",
+      "name": "💳 Services financiers"
+    },
+    {
+      "textId": "gaz-et-petrole",
+      "name": "🛢 Pétrole et gaz"
+    },
+    {
+      "textId": "electricite",
+      "name": "🔋 Électricité"
+    },
+    {
+      "textId": "chimie",
+      "name": "🧪 Produits chimiques"
+    },
+    {
+      "textId": "investissement",
+      "name": "💰 Investissement"
+    },
+    {
+      "textId": "telecommunication",
+      "name": "📡 Télécommunication"
+    },
+    {
+      "textId": "vente-au-detail",
+      "name": "🛍️ Vente au détail"
+    },
+    {
+      "textId": "internet",
+      "name": "🖥️ Internet"
+    },
+    {
+      "textId": "construction",
+      "name": "🏗 Construction"
+    },
+    {
+      "textId": "jeux-video",
+      "name": "🎮 Jeu vidéo"
+    },
+    {
+      "textId": "technologie",
+      "name": "💻 Technologie"
+    }
+  ]
